@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title Expenses
+    link(rel="stylesheet", href="/styles.css")
+  body
+    h1 Expenses
+    table
+      thead
+        tr
+          th ID
+          th User ID
+          th Amount
+          th Category
+          th Date
+      tbody
+        each expense in expenses
+          tr
+            td= expense.id
+            td= expense.user_id
+            td= expense.amount
+            td= expense.category
+            td= expense.date
+    a(href="/") Back to Home
